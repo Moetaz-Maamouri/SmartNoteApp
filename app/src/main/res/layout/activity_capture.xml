@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaptureActivity">
+
+    <!-- 🔝 Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarCapture"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="@string/scan_text"
+        android:titleTextColor="@android:color/white"/>
+
+    <!-- 📷 Camera Preview (Image after capture OR CameraX later) -->
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/toolbarCapture"
+        android:scaleType="centerCrop"
+        android:background="#E0E0E0"
+        android:contentDescription="Captured Image"/>
+
+    <!-- 📝 Extracted Text -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imagePreview"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scanned text will appear here..."
+            android:textSize="16sp"
+            android:textColor="#000"/>
+    </ScrollView>
+
+    <!-- 📸 Capture Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/camera"
+        app:background="@color/light_blue"/>
+
+    <Button
+        android:id="@+id/btnSaveCapture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Note"
+        android:layout_above="@id/btnCapture"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/light_blue"/>
+
+</RelativeLayout>

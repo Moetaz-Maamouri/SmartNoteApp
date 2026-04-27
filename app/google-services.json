@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "129849173169",
+    "project_id": "smartnotev2",
+    "storage_bucket": "smartnotev2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129849173169:android:34cc1daa6ba53b8f41ae90",
+        "android_client_info": {
+          "package_name": "com.example.smartnotev2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARTPHmxRf8yeIn8WFiC11D8BQPNGc7kJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
