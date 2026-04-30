@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartNoteV2">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".CaptureActivity"
             android:exported="false" />
         <activity

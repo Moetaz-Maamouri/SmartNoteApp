@@ -15,22 +15,21 @@
             android:id="@+id/toolbarofnotedetails"
             android:background="@color/white">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="12dp"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:text="Title"
-                android:textColor="@color/black"
-                android:id="@+id/titleofnoteofdetails">
-
-            </TextView>
 
 
 
 
         </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarofnotedetails"
+        android:padding="16dp"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:id="@+id/titleofnoteofdetails" />
 
         <TextView
             android:layout_width="match_parent"
@@ -39,7 +38,7 @@
             android:background="#faf7f7"
             android:textColor="@color/black"
             android:gravity="top|left"
-            android:layout_below="@id/toolbarofnotedetails"
+            android:layout_below="@id/titleofnoteofdetails"
            android:text="Content here"
             android:padding="15dp"
             android:id="@+id/contentofnoteofdetails"

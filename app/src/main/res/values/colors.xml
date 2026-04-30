@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Note Colors (Soft & Pleasant) -->
-    <color name="note_yellow">#FFF9F871</color>
-    <color name="note_green">#FFB9FBC0</color>
-    <color name="note_blue">#FFA0C4FF</color>
-    <color name="note_pink">#FFFFADAD</color>
-    <color name="note_purple">#FFCDB4DB</color>
-    <color name="note_orange">#FFFFD6A5</color>
+    <!-- Note Colors (Improved Soft & Harmonized) -->
+    <color name="note_yellow">#FFFFF3B0</color>
+    <color name="note_green">#FFD8F3DC</color>
+    <color name="note_blue">#FFD0EBFF</color>
+    <color name="note_pink">#FFFFD6E0</color>
+    <color name="note_purple">#FFE5DBFF</color>
+    <color name="note_orange">#FFFFE5B4</color>
 
     <!-- Background -->
-    <color name="background_light">#FFF5F5F5</color>
+    <color name="background_light">#FFF8F9FA</color>
     <color name="background_dark">#FF121212</color>
 
     <!-- Text Colors -->
-    <color name="text_primary">#FF212121</color>
-    <color name="text_secondary">#FF757575</color>
+    <color name="text_primary">#FF1C1C1E</color>
+    <color name="text_secondary">#FF6C757D</color>
 
     <!-- Accent -->
-    <color name="primary">#FF6200EE</color>
-    <color name="primary_dark">#FF3700B3</color>
-    <color name="accent">#FF03DAC5</color>
+    <color name="primary">#FF6C63FF</color>
+    <color name="primary_dark">#FF4B47CC</color>
+    <color name="accent">#FF00C9A7</color>
 
-    <color name="light_blue">#A1F4FB</color>
+    <color name="light_blue">#FFA0E7F9</color>
+
 </resources>

@@ -37,6 +37,9 @@ public class notedetails extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Note Details");
+
 
         Intent data =getIntent();
         mtitleofnotedeatil.setText(data.getStringExtra("title"));
