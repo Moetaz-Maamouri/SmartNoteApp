@@ -17,7 +17,7 @@
 <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
+    android:layout_above="@id/bottomNavigationView"
     android:layout_alignParentRight="true"
     android:layout_marginBottom="30dp"
     android:layout_marginRight="30dp"
@@ -36,14 +36,23 @@
         android:id="@+id/scanFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/createnotefab"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="30dp"
         android:layout_marginRight="30dp"
         android:src="@drawable/scan"
         android:contentDescription="Scan"
         app:background="@color/light_blue"
         app:maxImageSize="40dp"/>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:menu="@menu/bottom_nav_menu"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
