@@ -17,6 +17,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -70,6 +71,35 @@ public class CaptureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_capture);
+
+
+
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
+        bottomNav.setSelectedItemId(R.id.nav_capture); // change selon l'activity
+
+
+        bottomNav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_home) {
+                startActivity(new Intent(this, noteActivity.class));
+                overridePendingTransition(0, 0);
+                return true;
+
+            } else if (id == R.id.nav_capture) {
+
+                return true;
+            } else if (id == R.id.nav_create) {
+                startActivity(new Intent(this, createnote.class));
+                overridePendingTransition(0, 0);
+                return true;
+            } else if (id == R.id.nav_profile) {
+                startActivity(new Intent(this, ProfileActivity.class));
+                overridePendingTransition(0, 0);
+                return true;
+            }
+            return false;
+        });
 
         imagePreview = findViewById(R.id.imagePreview);
         textResult  = findViewById(R.id.textResult);

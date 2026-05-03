@@ -27,6 +27,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -57,6 +58,32 @@ public class noteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_note);
+
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
+        bottomNav.setSelectedItemId(R.id.nav_home); // change selon l'activity
+
+
+        bottomNav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_home) {
+                return true;
+
+            } else if (id == R.id.nav_capture) {
+                startActivity(new Intent(this, CaptureActivity.class));
+                overridePendingTransition(0, 0);
+                return true;
+            } else if (id == R.id.nav_create) {
+                startActivity(new Intent(this, createnote.class));
+                overridePendingTransition(0, 0);
+                return true;
+            } else if (id == R.id.nav_profile) {
+                startActivity(new Intent(this, ProfileActivity.class));
+                overridePendingTransition(0, 0);
+                return true;
+            }
+            return false;
+        });
 
 
 
