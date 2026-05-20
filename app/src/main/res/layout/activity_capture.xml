@@ -12,7 +12,7 @@
         android:id="@+id/toolbarCapture"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#6200EE"
         android:title="@string/scan_text"
         android:titleTextColor="@android:color/white"/>
 
@@ -69,6 +69,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
-        app:menu="@menu/bottom_nav_menu"/>
+        app:menu="@menu/bottom_nav_menu"
+        app:itemActiveIndicatorStyle="@style/NoIndicator"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"/>
 
 </RelativeLayout>

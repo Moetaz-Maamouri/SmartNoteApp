@@ -1,6 +1,7 @@
 package com.example.smartnotev2;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -44,7 +45,7 @@ public class editnote extends AppCompatActivity {
         msveeditnote=findViewById(R.id.saveeditnote);
         Toolbar toolbar=findViewById(R.id.toolbarofeditnote);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTitleTextColor(Color.WHITE);
         data=getIntent();
         mAuth = FirebaseAuth.getInstance();
         firebaseFirestore =FirebaseFirestore.getInstance();

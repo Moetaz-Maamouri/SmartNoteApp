@@ -1,6 +1,8 @@
 package com.example.smartnotev2;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,7 +46,9 @@ public class createnote extends AppCompatActivity {
 
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
-        bottomNav.setSelectedItemId(R.id.nav_capture); // change selon l'activity
+        bottomNav.setSelectedItemId(R.id.nav_create); // change selon l'activity
+
+
 
 
         bottomNav.setOnItemSelectedListener(item -> {
@@ -78,7 +82,8 @@ public class createnote extends AppCompatActivity {
         mcreatetitleofnote = findViewById(R.id.createtitleofnote);
         Toolbar toolbar = findViewById(R.id.toolbarofcreatenote);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTitleTextColor(Color.WHITE);
+        getSupportActionBar().setTitle("Create Your Note");
 
         mAuth = FirebaseAuth.getInstance();
         firebaseFirestore =FirebaseFirestore.getInstance();

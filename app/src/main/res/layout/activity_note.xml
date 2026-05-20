@@ -5,13 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:itemActiveIndicatorStyle="@style/NoIndicator"
+    app:itemIconTint="@color/bottom_nav_color"
+    app:itemTextColor="@color/bottom_nav_color"
     tools:context=".noteActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#6200EE"
         android:titleTextColor="@android:color/white"/>
 
 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -24,8 +27,9 @@
     android:layout_gravity="bottom|end"
     android:id="@+id/createnotefab"
     android:src="@drawable/add_symbol"
-    android:background="@color/light_blue"
-    app:maxImageSize="40dp"
+    app:backgroundTint="#6200EE"
+    app:maxImageSize="30dp"
+    app:tint="@android:color/white"
 >
 
 
@@ -42,8 +46,9 @@
         android:layout_marginRight="30dp"
         android:src="@drawable/scan"
         android:contentDescription="Scan"
-        app:background="@color/light_blue"
-        app:maxImageSize="40dp"/>
+        app:backgroundTint="#6200EE"
+        app:maxImageSize="35dp"
+        app:tint="@android:color/white"/>
 
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -52,12 +57,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
-        app:menu="@menu/bottom_nav_menu"/>
+        app:menu="@menu/bottom_nav_menu"
+        app:itemActiveIndicatorStyle="@style/NoIndicator"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
         android:id="@+id/recyclerview"
         android:layout_below="@+id/toolbar"
         android:scrollbars="vertical">

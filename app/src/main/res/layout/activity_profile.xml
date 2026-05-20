@@ -11,29 +11,27 @@
     <View
         android:id="@+id/headerBg"
         android:layout_width="0dp"
-        android:layout_height="220dp"
+        android:layout_height="160dp"
         android:background="#6200EE"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-
-
-    <!-- Nom -->
+    <!-- Nom ✅ positionné dans le header -->
     <TextView
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nom"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/main"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="@id/headerBg"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Email -->
+    <!-- Email ✅ sous le nom, encore dans le header -->
     <TextView
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
@@ -41,10 +39,10 @@
         android:text="email@example.com"
         android:textColor="#E0E0E0"
         android:textSize="14sp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/tvName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="4dp"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Card stats -->
     <androidx.cardview.widget.CardView
@@ -52,7 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/headerBg"
@@ -66,18 +64,19 @@
             android:padding="24dp">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Statistiques"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="#333333"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="#333333"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#EEEEEE"
-                android:layout_marginVertical="12dp"/>
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -85,21 +84,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:text="Nombre de notes"
-                    android:textSize="14sp"
-                    android:textColor="#666666"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="Nombre de notes"
+                    android:textSize="14sp"
+                    android:textColor="#666666"/>
 
                 <TextView
                     android:id="@+id/tvNoteCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="0"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#6200EE"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textColor="#6200EE"/>
 
             </LinearLayout>
 
@@ -128,6 +127,9 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:menu="@menu/bottom_nav_menu"
+        app:itemActiveIndicatorStyle="@style/NoIndicator"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

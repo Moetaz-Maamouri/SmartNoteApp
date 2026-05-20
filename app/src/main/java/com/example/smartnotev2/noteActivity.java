@@ -1,6 +1,7 @@
 package com.example.smartnotev2;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -99,6 +100,7 @@ public class noteActivity extends AppCompatActivity {
         scanFab = findViewById(R.id.scanFab);
 
         setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
         getSupportActionBar().setTitle("All Notes");
 
         mcreatenotesfab.setOnClickListener(new View.OnClickListener() {

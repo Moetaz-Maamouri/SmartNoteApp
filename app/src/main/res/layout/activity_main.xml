@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="Log In To Continue"
             android:textSize="23sp"
-            android:textColor="#FF8596"/>
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
@@ -92,7 +92,7 @@
             android:layout_marginStart="8dp"
             android:textSize="16sp"
             android:text="Log In"
-            android:textColor="#FFBD4D"
+            android:textColor="@color/white"
             android:layout_centerInParent="true"/>
 
 
@@ -115,7 +115,7 @@
             android:layout_marginStart="8dp"
             android:textSize="16sp"
             android:text="New User? Sign Up"
-            android:textColor="#FFBD4D"
+            android:textColor="@color/white"
             android:layout_centerInParent="true"/>
 
 

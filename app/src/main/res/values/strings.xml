@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SmartNoteV2</string>
     <string name="scan_text">Scan Text</string>
+    <string name="note_details">Note details</string>
 </resources>

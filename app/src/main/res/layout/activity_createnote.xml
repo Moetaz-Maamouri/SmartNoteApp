@@ -7,70 +7,74 @@
     android:layout_height="match_parent"
     tools:context=".createnote">
 
+    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbarofcreatenote"
-        android:background="@color/white">
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#6200EE"
+        android:elevation="4dp"
+        android:titleTextColor="@android:color/white"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="12dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:hint="Enter your note title here"
-            android:id="@+id/createtitleofnote">
-
-        </EditText>
-
-
-
-
-    </androidx.appcompat.widget.Toolbar>
-
+    <!-- Title EditText -->
     <EditText
+        android:id="@+id/createtitleofnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarofcreatenote"
+        android:background="@android:color/white"
+        android:hint="Enter your note title here"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/createtitleofnote"
+        android:background="#EEEEEE"/>
+
+    <!-- Content EditText -->
+    <EditText
+        android:id="@+id/createcontentofnote"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="15sp"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_below="@id/divider"
         android:background="#faf7f7"
-        android:textColor="@color/black"
         android:gravity="top|left"
-        android:layout_below="@id/toolbarofcreatenote"
         android:hint="Enter your note content here"
-        android:padding="15dp"
-        android:id="@+id/createcontentofnote"
-        >
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"/>
 
-    </EditText>
-
-
-
+    <!-- FAB Save -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/savenote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/bottomNavigationView"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_gravity="bottom|end"
-        android:id="@+id/savenote"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
         android:src="@drawable/save"
-        android:background="#A1F4FB"
+        app:backgroundTint="#6200EE"
         app:maxImageSize="30dp"
-        >
+        app:tint="@android:color/white"/>
 
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
-    <!-- Bottom Navigation -->
+    <!-- ✅ Bottom Navigation — attributs ici pas sur RelativeLayout -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
-        app:menu="@menu/bottom_nav_menu"/>
-
+        app:menu="@menu/bottom_nav_menu"
+        app:itemActiveIndicatorStyle="@style/NoIndicator"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"/>
 
 </RelativeLayout>
